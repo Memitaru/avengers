@@ -3,6 +3,7 @@ import { Route } from "react-router-dom";
 
 import Home from './Components/Home';
 import AvengersList from './Components/AvengersList';
+import AvengerPage from './Components/AvengerPage';
 
 import avengers from './data';
 
@@ -20,7 +21,8 @@ class App extends Component {
     return (
       <div className="App">
         <Route exact path="/" component={Home} />
-        <Route path="/avengers" component={AvengersList} />
+        <Route exact path="/avengers" component={AvengersList} />
+        <Route path="/avengers/:id" component={AvengerPage} />
       </div>
     );
   }
