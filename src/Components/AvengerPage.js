@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 import avengers from '../data';
 
@@ -16,6 +17,9 @@ function AvengersPage(props){
                 <h1>{avenger.name}</h1>
                 <h4>({avenger.nickname})</h4>
                 <p>{avenger.description}</p>
+            </div>
+            <div>
+                <Link to="/avengers">Back</Link>
             </div>
         </div>
     )
